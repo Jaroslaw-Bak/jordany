@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import '../stylesheets/contact.css';
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
 
   const [name,setName]= useState('');
   const [email,setEmail]= useState('');
   const [message,setMessage]= useState('');
+
+  const {t} = useTranslation();
+  
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,13 +22,13 @@ const Contact = () => {
   return (
     <div className="contact">
       <form onSubmit={(e)=> sendEmail(e)}>
-        <label htmlFor="name">Name</label>
-        <input value={name} onChange={(e)=> setName(e.target.value)} placeholder="Enter your name" type="text" id="name" name="name" />
-        <label htmlFor="email">Email</label>
-        <input value={email} onChange={(e)=> setEmail(e.target.value)} placeholder="Enter your email" type="text" id="email" name="name"></input>
-        <label htmlFor="message">Message</label>
-        <textarea value={message} onChange={(e)=> setMessage(e.target.value)} placeholder="Enter your message" id="message" name="message" />
-        <button type="submit">Send</button>
+        <label htmlFor="name">{t('Contact.name')}</label>
+        <input value={name} onChange={(e)=> setName(e.target.value)} placeholder={t('Contact.placeholders.name')} type="text" id="name" name="name" />
+        <label htmlFor="email">{t('Contact.email')}</label>
+        <input value={email} onChange={(e)=> setEmail(e.target.value)} placeholder={t('Contact.placeholders.email')} type="text" id="email" name="name"></input>
+        <label htmlFor="message">{t('Contact.message')}</label>
+        <textarea value={message} onChange={(e)=> setMessage(e.target.value)} placeholder={t('Contact.placeholders.message')} id="message" name="message" />
+        <button type="submit">{t('Contact.button')}</button>
        </form >
     </div>
   )

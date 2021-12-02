@@ -9,12 +9,11 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="home-shoe-container">
+      <div className="home-shoes-container">
           {shoes && shoes.map((shoe, index) => (
-          <Link key={index} to={`/boot/${shoe.id}`}>
-            <div >
+          <Link key={index} to={`/boot/${shoe.id}`} className="home-shoe-container" >
+                <p>Jordany moje ulubione :)</p>
                 <img  className="home-shoe" src={shoe.img} alt="cos" />   
-            </div>
           </Link>
         ))}
       </div>
