@@ -1,51 +1,82 @@
-
+@import url(//db.onlinewebfonts.com/c/2206d6cc490084998d531e8c1b2cbb4a?family=Druk+Wide+Bold);
+@import url(//db.onlinewebfonts.com/c/3724259186746d86859fbb0fde0fa44a?family=Druk+Text+Wide+Web+Medium);
 
 .header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  height: 130px;
-  position: fixed;
+  height: 160px;
+  position: sticky;
+  top: 0;
   z-index: 10;
-  /* background-color: #ffffff; */
-  background-color: greenyellow;
+  background-color: #ffffff;
 }
 
 .header-logo {
   padding: 5px 0;
   font-size: 48px;
-  font-weight: bold;
+  font-family: 'Druk Wide Bold';
   margin-left: 80px;
-  max-width: 400px;
+  max-width: 500px;
   height: 120px;
+}
+
+.header-bottom {
+  display: flex;
+  flex-direction: row;
 }
 
 .header-right-side {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 100px;
+  margin-left: 30px;
   margin-right: 20px;
-  background-color: white;
+  margin-top: 10px;
+  height: 73px;
 }
 
-.header-right-side-lang {
+.header-lang {
   display: flex;
   flex-direction: row;
+  margin-left: auto;
+  margin-right: 60px;
+}
+.header-lang img {
+  margin: 20px 10px 0 10px;
+  width: 32px;
+  height: 23px;
 }
 
 .header-right-side-nav {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   width: 971px;
-  height: 73px;
-
 }
 
-.header-right-side p {
-  font-size: 28px;
+.header-right-side-nav-link {
+  display: flex;
+  flex: 0.333;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.header-right-side-nav div {
+  font-size: 36px;
+  font-family: 'Druk Text Wide';
+  font-style: italic;
+  line-height: 32px;
   padding: 5px;
   font-weight: bold;
+  color: #000000;
+}
 
+.header-crimson {
+  background-color: #ad0000;
+}
+
+.header-crimson div {
+  color: #fff;
 }

@@ -1,0 +1,21 @@
+.singlebootpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.singlebootpage-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.singlebootpage-container img {
+  width: 500px;
+  height: 500px;
+}
+
+.singlebootpage-leftside {
+  flex-direction: column;
+  margin: 20px;
+}
