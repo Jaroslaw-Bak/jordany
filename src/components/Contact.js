@@ -7,6 +7,7 @@ const Contact = () => {
   const [name,setName]= useState('');
   const [email,setEmail]= useState('');
   const [message,setMessage]= useState('');
+  const [surname,setSurname]= useState('');
 
   const {t} = useTranslation();
   
@@ -29,6 +30,7 @@ const Contact = () => {
         <label htmlFor="message">{t('Contact.message')}</label>
         <textarea value={message} onChange={(e)=> setMessage(e.target.value)} placeholder={t('Contact.placeholders.message')} id="message" name="message" />
         <button type="submit">{t('Contact.button')}</button>
+
        </form >
     </div>
   )

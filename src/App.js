@@ -6,6 +6,8 @@ import Header from './components/Header';
 import Fotter from './components/Fotter';
 import Contact from './components/Contact';
 import SingleBootPage from './components/SingleBootPage';
+import AdminSgnIn from './components/AdminSgnIn';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
   return (
@@ -18,11 +20,13 @@ const App = () => {
         </Route>
         <Route path="/aboutme">
         </Route>
-        <Route path="/admin">
+        <Route path="/signin">
+          <AdminSgnIn />
         </Route>
         <Route path="/boot/:id">
           <SingleBootPage />
         </Route>
+        <ProtectedRoute path="/admin" component={Contact} />
         <Route path="/">  
               <Home />    
         </Route>     
