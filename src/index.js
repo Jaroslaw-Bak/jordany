@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import LanguageProvider from './components/LanguageContext';
 
 import './Translations';
 
+export const LanguageContext =  React.createContext();
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <LanguageProvider value="pl">
+        <App />
+    </LanguageProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -13,6 +13,7 @@ const Home = () => {
       console.log(response.data)
 
   });
+
   }, [])
 
   const [shoes, setShoes]=useState([]);
@@ -22,8 +23,8 @@ const Home = () => {
       <div className="home-shoes-container">
           {shoes && shoes.map((shoe, index) => (
           <Link key={index} to={`/boot/${shoe.id}`} className="home-shoe-container" >
-                <p>{shoe.id}</p>
-                <img  className="home-shoe" src={shoe.imgs} alt="cos" />   
+                <p>{shoe.language.en.name}</p>
+                <img  className="home-shoe" src={shoe.imgs[0]} alt="cos" />   
           </Link>
         ))}
       </div>

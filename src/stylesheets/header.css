@@ -10,12 +10,10 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: #ffffff;
 }
 
 .header-logo {
-  padding: 5px 0;
-  font-size: 48px;
+  font-size: 46px;
   font-family: 'Druk Wide Bold';
   margin-left: 80px;
   max-width: 500px;

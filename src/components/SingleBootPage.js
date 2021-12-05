@@ -1,29 +1,36 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import '../stylesheets/singlebootpage.css';
+import axios from "axios";
+import { useLanguage } from "./LanguageContext";
+
+
+
 
 
 const SingleBootPage = () => {
 
   const {id} = useParams();
-  const [shoes, setShoes]=useState([{img: 'https://c.static-nike.com/a/images/w_960,c_limit,f_auto/oyrsoyhnv0gpjmoq1ntn/blue-chill.jpg', name: "Jordany", id: 1 }, {img: 'https://c.static-nike.com/a/images/w_960,c_limit,f_auto/oyrsoyhnv0gpjmoq1ntn/blue-chill.jpg', name: "Jordany", id: 2 }, {img: 'https://c.static-nike.com/a/images/w_960,c_limit,f_auto/oyrsoyhnv0gpjmoq1ntn/blue-chill.jpg', name: "Jordany",  id: 3 },{img: 'https://c.static-nike.com/a/images/w_960,c_limit,f_auto/oyrsoyhnv0gpjmoq1ntn/blue-chill.jpg', name: "Jordany" , id: 4 },{img: 'https://c.static-nike.com/a/images/w_960,c_limit,f_auto/oyrsoyhnv0gpjmoq1ntn/blue-chill.jpg', name: "Jordany" , id: 5 },{img: 'https://c.static-nike.com/a/images/w_960,c_limit,f_auto/oyrsoyhnv0gpjmoq1ntn/blue-chill.jpg', name: "Jordany", id: 6 },{img: 'https://c.static-nike.com/a/images/w_960,c_limit,f_auto/oyrsoyhnv0gpjmoq1ntn/blue-chill.jpg', name: "Jordany", id: 7 }])
   const [boot, setBoot]=useState();
+  const lang = useLanguage();
 
   useEffect(() => {
     if(id){
-      let shoe = shoes.filter((item)=> item.id === parseInt(id))
-      setBoot(shoe[0]);
+      axios.get("http://localhost:3050/api/shoe/", {  params: {_id: parseInt(id)}  }).then(response => {
+      setBoot(response.data) 
+    });
     }
     
     
   }, [id])
 
+
   return (
     <div className="singlebootpage">
-     {boot && <div className="singlebootpage-container"><img  className="home-shoe" src={boot.img} alt="cos" />
+     {boot && <div className="singlebootpage-container"> <img  className="home-shoe" src={boot[0].imgs[0]} alt="cos" />
         <div className="singlebootpage-leftside">
-          <h2>{boot.name}</h2>
-          <p>This boot is good what else do you want to know </p>
+          <h2>{boot[0].language.en.name}</h2>
+          <p>{boot[0].language[lang].description}</p>
         </div>
       </div>}   
     </div>

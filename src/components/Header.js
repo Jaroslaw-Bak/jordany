@@ -7,6 +7,7 @@ import fr from '../images/fr.png';
 import it from '../images/it.png';
 import pl from '../images/pl.png';
 import sp from '../images/sp.png';
+import { useUpdateLanguage } from "./LanguageContext";
 
 
 const Header = () => {
@@ -14,6 +15,7 @@ const Header = () => {
   const [onRoute, setOnRoute]= useState({home: true, contact: false, aboutMe: false});
    const location = useLocation();
    const {t, i18n} = useTranslation();
+   const updateLang = useUpdateLanguage();
 
   
   useEffect(()=> {
@@ -31,14 +33,19 @@ const Header = () => {
     
  
   }, [location])
+
+  const changeLanuage = (lang) => {
+    i18n.changeLanguage(lang);
+    updateLang(lang)
+  }
   
   return (
     <div className="header">
       <div className="header-lang">
-          <img onClick={() => i18n.changeLanguage('en')} src={fr}  alt="france"/>
-          <img onClick={() => i18n.changeLanguage('en')} src={it}  alt="italy"/>
-          <img onClick={() => i18n.changeLanguage('pl')} src={pl}  alt="poland"/>
-          <img onClick={() => i18n.changeLanguage('es')} src={sp}  alt="spain"/>
+          <img onClick={() => changeLanuage('en')} src={fr}  alt="france"/>
+          <img onClick={() => changeLanuage('en')} src={it}  alt="italy"/>
+          <img onClick={() => changeLanuage('pl')} src={pl}  alt="poland"/>
+          <img onClick={() => changeLanuage('es')} src={sp}  alt="spain"/>
         </div>
       <div className="header-bottom">
       <div className="header-logo">
