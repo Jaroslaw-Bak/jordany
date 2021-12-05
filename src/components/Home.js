@@ -10,8 +10,6 @@ const Home = () => {
   useEffect(() => {
     axios.get("http://localhost:3050/api/shoes/").then(response => {
       setShoes(response.data) 
-      console.log(response.data)
-
   });
 
   }, [])

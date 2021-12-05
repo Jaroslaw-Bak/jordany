@@ -13,11 +13,14 @@ const SingleBootPage = () => {
   const {id} = useParams();
   const [boot, setBoot]=useState();
   const lang = useLanguage();
+  const [images, setImages]=useState();
+  const [imgNumber, setImgNumber]=useState(0);
 
   useEffect(() => {
     if(id){
       axios.get("http://localhost:3050/api/shoe/", {  params: {_id: parseInt(id)}  }).then(response => {
-      setBoot(response.data) 
+      setBoot(response.data)
+      setImages(response.data[0].imgs)
     });
     }
     
@@ -27,9 +30,17 @@ const SingleBootPage = () => {
 
   return (
     <div className="singlebootpage">
-     {boot && <div className="singlebootpage-container"> <img  className="home-shoe" src={boot[0].imgs[0]} alt="cos" />
+     {boot && <div className="singlebootpage-container">
         <div className="singlebootpage-leftside">
-          <h2>{boot[0].language.en.name}</h2>
+          <img  className="singlebootpage-bigImg" src={boot[0].imgs[imgNumber]} alt="cos" />
+          <div className="singlebootpage-smallImage-container">
+            {images && images.map((img, index)=>(
+              <img onClick={()=> setImgNumber(index)} className="singlebootpage-smallImg" src={img} alt="cos"/>
+            ))}
+          </div>
+        </div>
+        <div className="singlebootpage-rightside">
+          <h1>{boot[0].language.en.name}</h1>
           <p>{boot[0].language[lang].description}</p>
         </div>
       </div>}   

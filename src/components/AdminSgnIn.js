@@ -1,5 +1,7 @@
+import axios from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import '../stylesheets/adminSignin.css';
 
 
 const AdminSgnIn =() => {
@@ -10,25 +12,21 @@ const AdminSgnIn =() => {
 
   const handleSubmit = () => {
   
-    //if username or password field is empty, return error message
-    if (username === "" || password === "") {
-      console.log("Empty username/password field")
-  
-    } else if (
-      username.toLowerCase() === "admin" &&
-      password === "123456"
-    ) {
-      //Signin Success
-      localStorage.setItem("isAuthenticated", "true");
-      history.push('/admin')
-    } else {
-      console.log("Empty username/password field")
-    }
+    axios.post("http://localhost:3050/api/login", { username, password}).then(response => {
+      if(response.data.isAuthenticated){
+        console.log("logged in")
+        sessionStorage.setItem("isAuthenticated", "true");
+        history.push('/admin')
+      }else {
+        console.log("Wrong username or password")
+      }
+    })
+
   };
 
 
   return (
-    <div>
+    <div className="adminsignin">
       <label>login</label>
       <input value={username} onChange={(e)=> setUsername(e.target.value)} />
       <label>password</label>

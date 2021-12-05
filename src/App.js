@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import SingleBootPage from './components/SingleBootPage';
 import AdminSgnIn from './components/AdminSgnIn';
 import ProtectedRoute from './components/ProtectedRoute';
+import AdminPage from './components/AdminPage';
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
         <Route path="/boot/:id">
           <SingleBootPage />
         </Route>
-        <ProtectedRoute path="/admin" component={Contact} />
+        <ProtectedRoute path="/admin" component={AdminPage} />
         <Route path="/">  
               <Home />    
         </Route>     
