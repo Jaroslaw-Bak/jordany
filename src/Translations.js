@@ -5,6 +5,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import pl from '../src/translations/pl';
 import en from '../src/translations/en';
 import es from '../src/translations/es';
+import fr from '../src/translations/fr';
 
 i18n
   // detect user language
@@ -16,7 +17,7 @@ i18n
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     debug: true,
-    fallbackLng: 'en',
+    fallbackLng: 'pl',
     detection: {
       order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
 
@@ -30,7 +31,7 @@ i18n
         excludeCacheFor: ['cimode'],
     },
     lng: "",
-    whitelist: ["pl", "en", "es"],
+    whitelist: ["pl", "en", "es", "fr"],
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
@@ -43,6 +44,9 @@ i18n
       },
       es: {
         translation: es 
+      },
+      fr: {
+        translation: fr
       }
     }
   });

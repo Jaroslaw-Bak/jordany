@@ -14,5 +14,14 @@ export default {
       message: "Enter your message"
     },
     button: "Send"
+  },
+  AdminPage: {
+    updateCollection: "Update your collection",
+    bootName: "Enter your shoe name",
+    enterDescriptionEn: "Enter your en description",
+    enterDescriptionPL: "Enter your pl description",
+    enterDescriptionEs: "Enter your es description",
+    enterDescriptionFr: "Enter your fr description",
+    button: "Add shoe to Collection"
   }
 }

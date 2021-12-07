@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "../stylesheets/header.css";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import fr from '../images/fr.png';
 import it from '../images/it.png';
@@ -16,6 +16,7 @@ const Header = () => {
    const location = useLocation();
    const {t, i18n} = useTranslation();
    const updateLang = useUpdateLanguage();
+   const history = useHistory();
 
   
   useEffect(()=> {
@@ -42,13 +43,13 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-lang">
-          <img onClick={() => changeLanuage('en')} src={fr}  alt="france"/>
+          <img onClick={() => changeLanuage('fr')} src={fr}  alt="france"/>
           <img onClick={() => changeLanuage('en')} src={it}  alt="italy"/>
           <img onClick={() => changeLanuage('pl')} src={pl}  alt="poland"/>
           <img onClick={() => changeLanuage('es')} src={sp}  alt="spain"/>
         </div>
       <div className="header-bottom">
-      <div className="header-logo">
+      <div onClick={() => history.push('/')} className="header-logo">
         My Jordans Collection
       </div>
       <div className="header-right-side">

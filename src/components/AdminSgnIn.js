@@ -28,9 +28,9 @@ const AdminSgnIn =() => {
   return (
     <div className="adminsignin">
       <label>login</label>
-      <input value={username} onChange={(e)=> setUsername(e.target.value)} />
+      <input type="text" value={username} onChange={(e)=> setUsername(e.target.value)} />
       <label>password</label>
-      <input value={password} onChange={(e)=> setPassword(e.target.value)}  />
+      <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)}  />
       <button onClick={()=> handleSubmit()} >Sign In</button>
     </div>
   

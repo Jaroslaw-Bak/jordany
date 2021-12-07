@@ -14,5 +14,14 @@ export default {
       message: "Wprowadź swoją wiadomość"
     },
     button: "Wyślij"
+  },
+  AdminPage: {
+    updateCollection: "Zaktualizuj swoją kolekcję",
+    bootName: "Wpisz swoją nazwę buta",
+    enterDescriptionEn: "Wpisz swój opis en",
+    enterDescriptionPL: "Wpisz swój opis pl",
+    enterDescriptionEs: "Wpisz swój opis es",
+    enterDescriptionFr: "Wpisz swój opis fr",
+    button: "Dodaj but do kolekcji"
   }
 }
