@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import '../stylesheets/contact.css';
 import { useTranslation } from "react-i18next";
 
@@ -22,11 +22,15 @@ const Contact = () => {
   return (
     <div className="contact">
       <form onSubmit={(e)=> sendEmail(e)}>
-        <label htmlFor="name">{t('Contact.name')}</label>
+        <div className="contact-BaseInfo" >
+        <label htmlFor="name">{t('Contact.name')}:</label>
         <input value={name} onChange={(e)=> setName(e.target.value)} placeholder={t('Contact.placeholders.name')} type="text" id="name" name="name" />
-        <label htmlFor="email">{t('Contact.email')}</label>
+        </div>
+        <div className="contact-BaseInfo" >
+        <label htmlFor="email">{t('Contact.email')}:</label>
         <input value={email} onChange={(e)=> setEmail(e.target.value)} placeholder={t('Contact.placeholders.email')} type="text" id="email" name="name"></input>
-        <label htmlFor="message">{t('Contact.message')}</label>
+        </div>
+        {/* <label htmlFor="message">{t('Contact.message')}</label> */}
         <textarea value={message} onChange={(e)=> setMessage(e.target.value)} placeholder={t('Contact.placeholders.message')} id="message" name="message" />
         <button type="submit">{t('Contact.button')}</button>
 
