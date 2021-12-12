@@ -44,7 +44,7 @@ const Header = () => {
     <div className="header">
       <div className="header-lang">
           <img onClick={() => changeLanuage('fr')} src={fr}  alt="france"/>
-          <img onClick={() => changeLanuage('en')} src={it}  alt="italy"/>
+          <img onClick={() => changeLanuage('en')} src="https://cdn1.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_United_Kingdom_-_Circle-512.png"  alt="england"/>
           <img onClick={() => changeLanuage('pl')} src={pl}  alt="poland"/>
           <img onClick={() => changeLanuage('es')} src={sp}  alt="spain"/>
         </div>

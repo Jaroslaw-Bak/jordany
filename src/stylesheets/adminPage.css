@@ -3,7 +3,39 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
   height: 70%;
+}
+
+.adminPage-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 30px;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+
+.adminPage-button {
+  margin: 0 10px;
+}
+
+.adminPage-leftSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.adminPage-rightSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-left: 20px;
 }
 
 .adminPage label {
@@ -15,8 +47,9 @@
 .adminPage input {
   font-size: 20px;
   padding: 5px;
-  min-width: 300px;
+  min-width: 450px;
   margin-top: 15px;
+  border: 3px solid #000;
 }
 
 .adminPage button {

@@ -21,6 +21,7 @@ export default {
   AdminPage: {
     updateCollection: "Update your collection",
     bootName: "Enter your shoe name",
+    image: "Enter your image url",
     enterDescriptionEn: "Enter your en description",
     enterDescriptionPL: "Enter your pl description",
     enterDescriptionEs: "Enter your es description",
