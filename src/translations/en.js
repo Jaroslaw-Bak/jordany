@@ -4,6 +4,9 @@ export default {
     contact: "Contact",
     aboutMe: "About Me"
   },
+  AboutMe : {
+    description: "'My name is Toby. I'm a webdesigner working for a digital creative agenty called Creately. Sometimes i create websites, posters, ecards. I like photography and I am a big fan fan of Jordan.'"
+  },
   Contact: {
     name: "Name",
     email: "Email",

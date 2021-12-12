@@ -1,8 +1,11 @@
 export default {
   Header: {
     collection: "Kolekcja",
-    contact: "Kontact",
+    contact: "Kontakt",
     aboutMe: "O mnie"
+  },
+  AboutMe : {
+    description: 'Nazywam się Toby. Jestem webdesignerem pracującym dla cyfrowej agencji kreatywnej Creately. Czasami tworzę strony internetowe, plakaty, e-kartki. Lubię fotografię i jestem wielkim fanem Jordana.'
   },
   Contact: {
     name: "Imię",

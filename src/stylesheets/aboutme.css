@@ -1,0 +1,21 @@
+.about {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.aboutme-img {
+    width: 300px;
+
+    
+}
+
+.aboutme-description {
+    padding-left: 30px;
+    max-width: 300px;
+
+}

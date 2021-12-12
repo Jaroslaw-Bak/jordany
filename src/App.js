@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header';
 import Fotter from './components/Fotter';
+import AboutMe from './components/AboutMe'
 import Contact from './components/Contact';
 import SingleBootPage from './components/SingleBootPage';
 import AdminSgnIn from './components/AdminSgnIn';
@@ -20,6 +21,7 @@ const App = () => {
             <Contact />
         </Route>
         <Route path="/aboutme">
+          <AboutMe />
         </Route>
         <Route path="/signin">
           <AdminSgnIn />

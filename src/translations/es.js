@@ -4,6 +4,9 @@ export default {
     contact: "Contacto",
     aboutMe: "Acerca de mí"
   },
+  AboutMe : {
+    description: "Mi nombre es Toby. Soy un diseñador web que trabaja para una agencia creativa digital llamada Creately. A veces creo sitios web, carteles, tarjetas electrónicas. Me gusta la fotografía y soy un gran fan de Jordan."
+  },
   Contact: {
     name: "Nombre",
     email: "Email",
