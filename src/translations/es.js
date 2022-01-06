@@ -26,5 +26,11 @@ export default {
     enterDescriptionEs: "Ingrese su descripción es",
     enterDescriptionFr: "Ingrese su descripción fr",
     button: "Agregar zapato a la colección"
+  },
+  SingleBootPage: {
+    addComment: "Nuevo comentario",
+    submitComment: "Agregar",
+    name: "Nombre",
+    comment: "Comentario"
   }
 }

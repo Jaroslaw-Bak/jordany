@@ -26,5 +26,11 @@ export default {
     enterDescriptionEs: "Wpisz swój opis es",
     enterDescriptionFr: "Wpisz swój opis fr",
     button: "Dodaj but do kolekcji"
+  },
+  SingleBootPage: {
+    addComment: "Nowy Komentarz",
+    submitComment: "Dodaj",
+    name: "Imię",
+    comment: "Komentarz"
   }
 }

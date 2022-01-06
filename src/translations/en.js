@@ -27,5 +27,11 @@ export default {
     enterDescriptionEs: "Enter your es description",
     enterDescriptionFr: "Enter your fr description",
     button: "Add shoe to Collection"
+  },
+  SingleBootPage: {
+    addComment: "New Comment",
+    submitComment: "Add",
+    name: "Name",
+    comment: "Comment"
   }
 }
