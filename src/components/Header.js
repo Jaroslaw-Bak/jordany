@@ -4,7 +4,6 @@ import "../stylesheets/header.css";
 import {Link, useHistory} from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import fr from '../images/fr.png';
-import it from '../images/it.png';
 import pl from '../images/pl.png';
 import sp from '../images/sp.png';
 import { useUpdateLanguage } from "./LanguageContext";

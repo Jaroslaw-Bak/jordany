@@ -12,7 +12,7 @@ const AdminSgnIn =() => {
 
   const handleSubmit = () => {
   
-    axios.post("http://localhost:3050/api/login", { username, password}).then(response => {
+    axios.post("https://sparkling-understood-pyramid.glitch.me/api/login", { username, password}).then(response => {
       if(response.data.isAuthenticated){
         console.log("logged in")
         sessionStorage.setItem("isAuthenticated", "true");

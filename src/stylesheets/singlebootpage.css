@@ -131,3 +131,18 @@
   font-weight: bold;
   margin: 10px 0;
 }
+
+@media (max-width: 1400px) {
+  .singlebootpage-container {
+    flex-direction: column;
+  }
+
+  .singlebootpage-rightside p {
+    font-size: 16px;
+    width: 90vw;
+  }
+
+  .singlebootpage-rightside h1 {
+    font-size: 20px;
+  }
+}

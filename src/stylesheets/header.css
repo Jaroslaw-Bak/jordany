@@ -80,3 +80,19 @@
 .header-crimson div {
   color: #fff;
 }
+
+@media (max-width: 1400px) {
+  .header-logo {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  .header-right-side-nav {
+    width: 60vw;
+  }
+
+  .header-right-side-nav div {
+    font-size: 18px;
+    padding: 0;
+  }
+}

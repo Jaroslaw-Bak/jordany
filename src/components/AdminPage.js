@@ -18,7 +18,7 @@ const AdminPage =() => {
   const  handleAddBoot = async () => {
 
     let id;
-    await axios.get("http://localhost:3050/api/shoes/").then(response => {
+    await axios.get("https://sparkling-understood-pyramid.glitch.me/api/shoes/").then(response => {
       id = response.data[response.data.length -1].id
     })
 
@@ -78,8 +78,7 @@ const AdminPage =() => {
         id: id+1,
         imgs: imgUrl
       }
-    
-      axios.post("http://localhost:3050/api/shoes/", boot).then(response => {
+      axios.post("https://sparkling-understood-pyramid.glitch.me/api/shoes/", boot).then(response => {
         if(response.status == 201){
           console.log("boot added")
         }else {

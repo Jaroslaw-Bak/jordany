@@ -30,7 +30,7 @@ const Contact = () => {
         <label htmlFor="email">{t('Contact.email')}:</label>
         <input value={email} onChange={(e)=> setEmail(e.target.value)} placeholder={t('Contact.placeholders.email')} type="text" id="email" name="name"></input>
         </div>
-        {/* <label htmlFor="message">{t('Contact.message')}</label> */}
+        <label htmlFor="message">{t('Contact.message')}</label>
         <textarea value={message} onChange={(e)=> setMessage(e.target.value)} placeholder={t('Contact.placeholders.message')} id="message" name="message" />
         <button type="submit">{t('Contact.button')}</button>
 

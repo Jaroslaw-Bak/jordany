@@ -30,7 +30,7 @@ const SingleBootPage = () => {
   }, [id])
 
   const fetchBoot = ()=> {
-    axios.get("http://localhost:3050/api/shoe/", {  params: {_id: parseInt(id)}  }).then(response => {
+    axios.get("https://sparkling-understood-pyramid.glitch.me/api/shoe/", {  params: {_id: parseInt(id)}  }).then(response => {
       setBoot(response.data)
       setImages(response.data[0].imgs)
     });
@@ -43,7 +43,7 @@ const SingleBootPage = () => {
 
   const addComment =() => {
     if(commentUsername.length >= 3 && commentContent.length >= 3){
-      axios.post("http://localhost:3050/api/shoeup/", {_id: id, comment: { name: commentUsername, comment: commentContent}}).then(
+      axios.post("https://sparkling-understood-pyramid.glitch.me/api/shoeup/", {_id: id, comment: { name: commentUsername, comment: commentContent}}).then(
         response => {
           console.log(response);
           setShowAddCommentBox(!showAddCommentBox);
